@@ -1,6 +1,6 @@
 //
 //  Recipe_AppUITests.swift
-//  Recipe AppUITests
+//  Recipe-AppUITests
 //
 //  Created by Sphelele Ngubane on 2021/06/11.
 //

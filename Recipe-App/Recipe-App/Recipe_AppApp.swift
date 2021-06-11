@@ -1,6 +1,6 @@
 //
 //  Recipe_AppApp.swift
-//  Recipe App
+//  Recipe-App
 //
 //  Created by Sphelele Ngubane on 2021/06/11.
 //

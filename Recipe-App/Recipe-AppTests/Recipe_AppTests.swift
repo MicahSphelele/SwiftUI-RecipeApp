@@ -1,6 +1,6 @@
 //
 //  Recipe_AppTests.swift
-//  Recipe AppTests
+//  Recipe-AppTests
 //
 //  Created by Sphelele Ngubane on 2021/06/11.
 //
