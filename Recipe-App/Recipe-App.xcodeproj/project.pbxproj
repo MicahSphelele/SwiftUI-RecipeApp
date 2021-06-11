@@ -108,6 +108,7 @@
 		B1AB98CF2673F390007882A5 /* Recipe-App */ = {
 			isa = PBXGroup;
 			children = (
+				903D01BB2673FF2400885E81 /* Models */,
 				B1AB98D02673F390007882A5 /* Recipe_AppApp.swift */,
 				B1AB98D22673F390007882A5 /* ContentView.swift */,
 				B1AB98D42673F391007882A5 /* Assets.xcassets */,
@@ -273,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1AB98D32673F390007882A5 /* ContentView.swift in Sources */,
+				903D01BD2673FF2400885E81 /* FoodCategory.swift in Sources */,
 				B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */,
 				90BE98C92673F97D00E99918 /* FoodCategory.swift in Sources */,
 			);
