@@ -8,7 +8,7 @@
 import Foundation
 
 struct Recipe: Codable {
-    let id: Int?
+    let id: Int
     let title:String?
     let publisher:String?
     let featuredImage:String?
@@ -19,4 +19,8 @@ struct Recipe: Codable {
     let ingredients: [String]?
     let dateAdded:String?
     let dateUpdated:String?
+}
+
+extension Recipe: Identifiable {
+    var ID: Int { return id }
 }
