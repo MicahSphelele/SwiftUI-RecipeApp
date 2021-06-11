@@ -284,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90BE98C32673F7C900E99918 /* Recipe.swift in Sources */,
 				B1AB9900267405E1007882A5 /* RecipeListViewModel.swift in Sources */,
 				B1AB98D32673F390007882A5 /* ContentView.swift in Sources */,
 				B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */,
