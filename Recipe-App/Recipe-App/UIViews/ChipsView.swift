@@ -7,17 +7,25 @@
 
 import SwiftUI
 
-struct ChipsView: View {
-    @State var chipsList: [Tri] = []
+struct ChipsListView: View {
+    
+    //@Binding var searchText: String
     
     var body: some View {
-        ForEach(chipsList) { chip in }
-        
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(getAllFoodCategories(), id: \.self) { category in
+                    
+                    FoodCategoryChip(title: category.rawValue,isSelected: true)
+                
+                }
+            }
+        }
     }
 }
 
 struct ChipsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChipsView()
+        ChipsListView()
     }
 }

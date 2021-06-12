@@ -23,3 +23,16 @@ enum FoodCategory: String, CaseIterable {
         return result
     }
 }
+
+func getAllFoodCategories() -> [FoodCategory] {
+    
+    return [FoodCategory.CHICKEN,FoodCategory.BEEF,
+            FoodCategory.SOUP, FoodCategory.DESSERT,
+            FoodCategory.VEGETARIAN, FoodCategory.MILK,
+            FoodCategory.VEGAN, FoodCategory.PIZZA,
+            FoodCategory.DONUT
+    ]
+    
+}
+
+
