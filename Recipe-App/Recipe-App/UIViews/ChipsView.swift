@@ -9,14 +9,14 @@ import SwiftUI
 
 struct ChipsListView: View {
     
-    //@Binding var searchText: String
+    @Binding var selectedCategory: String
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
                 ForEach(getAllFoodCategories(), id: \.self) { category in
                     
-                    FoodCategoryChip(title: category.rawValue,isSelected: true)
+                    FoodCategoryChip(title: category.rawValue, selectedCategory: self.$selectedCategory)
                 
                 }
             }
@@ -24,8 +24,12 @@ struct ChipsListView: View {
     }
 }
 
+#if DEBUG
 struct ChipsView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        ChipsListView()
+    
+        ChipsListView(selectedCategory: .constant("Beef"))
     }
 }
+#endif

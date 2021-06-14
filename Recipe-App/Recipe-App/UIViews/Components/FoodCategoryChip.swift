@@ -10,7 +10,7 @@ import SwiftUI
 struct FoodCategoryChip: View {
     
     let title: String  //pass system image
-    @State var isSelected: Bool
+    @Binding var selectedCategory: String
     
     var body: some View {
         HStack {
@@ -19,17 +19,21 @@ struct FoodCategoryChip: View {
                 .lineLimit(1)
                 .fixedSize()
         }.padding(.all, 6)
-        .foregroundColor(isSelected ? .white : .blue)
-        .background(isSelected ? Color.blue : Color.white)
+        .foregroundColor(.white)
+        .background(self.selectedCategory == title ? Color.gray : Color.blue)
         .cornerRadius(40)
         .onTapGesture {
-            isSelected.toggle() // toggle select - not selected
+            self.selectedCategory = title
         }
     }
 }
 
+#if DEBUG
+
 struct FoodCategoryChip_Previews: PreviewProvider {
     static var previews: some View {
-        FoodCategoryChip(title: "Chicken", isSelected: true)
+        FoodCategoryChip(title: "Chicken", selectedCategory: .constant("Chicken"))
     }
 }
+
+#endif
