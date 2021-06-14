@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct ImageTitleRatingCardView: View {
+    @Binding var imageRecipeName: String
+    
     var body: some View {
         VStack(spacing:0) {
-            Image("sweets")
+            Image(imageRecipeName)
                 .resizable()
                 .scaledToFit()
             HStack{
@@ -34,6 +36,6 @@ struct ImageTitleRatingCardView: View {
 
 struct ImageTitleRatingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageTitleRatingCardView()
+        ImageTitleRatingCardView(imageRecipeName: .constant("sweets"))
     }
 }
