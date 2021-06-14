@@ -10,6 +10,7 @@
 		903D022F2674214F00885E81 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D022D2674214F00885E81 /* Recipe.swift */; };
 		903D02302674214F00885E81 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D022E2674214F00885E81 /* FoodCategory.swift */; };
 		903D0238267422B400885E81 /* ChipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D0237267422B400885E81 /* ChipsView.swift */; };
+
 		B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB98D02673F390007882A5 /* Recipe_AppApp.swift */; };
 		B1AB98D52673F391007882A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AB98D42673F391007882A5 /* Assets.xcassets */; };
 		B1AB98D82673F391007882A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AB98D72673F391007882A5 /* Preview Assets.xcassets */; };
@@ -100,7 +101,6 @@
 				B1AB98E12673F391007882A5 /* Recipe-AppTests */,
 				B1AB98EC2673F391007882A5 /* Recipe-AppUITests */,
 				B1AB98CE2673F390007882A5 /* Products */,
-				B1AB98FD267405AD007882A5 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -324,7 +324,12 @@
 				903D0238267422B400885E81 /* ChipsView.swift in Sources */,
 				903D02302674214F00885E81 /* FoodCategory.swift in Sources */,
 				B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */,
+				903D0217267415F500885E81 /* APIClient.swift in Sources */,
+				903D01FC2674148700885E81 /* Recipe.swift in Sources */,
+				903D020F2674152900885E81 /* APIRequest.swift in Sources */,
+				903D01FD2674148700885E81 /* FoodCategory.swift in Sources */,
 				B1AB9902267406A4007882A5 /* RecipedetailsViewModel.swift in Sources */,
+				903D021F26741EAE00885E81 /* APIEnvironment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
