@@ -14,7 +14,7 @@ struct ChipsListView: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack {
-                ForEach(getAllFoodCategories(), id: \.self) { category in
+                ForEach(FoodCategory.getAllFoodCategories, id: \.self) { category in
                     
                     FoodCategoryChip(title: category.rawValue, selectedCategory: self.$selectedCategory)
                 
