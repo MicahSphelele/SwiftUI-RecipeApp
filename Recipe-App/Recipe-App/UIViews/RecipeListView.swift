@@ -12,7 +12,7 @@ struct RecipeListView: View {
     @State var selectedCategory: String = ""
     
     //Placeholder Data
-    @State var placeholderData = ["Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","PlaceholderI","Placeholder","Placeholder","PlaceholderI","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder","Placeholder"]
+    @State var placeholderData = Array(repeating: "PlaceHolder", count: 30)
     
     var body: some View {
         
