@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ImageTitleRatingCardView: View {
+struct RecipeCardItemView: View {
     @Binding var imageRecipeName: String
     
     var body: some View {
@@ -36,6 +36,6 @@ struct ImageTitleRatingCardView: View {
 
 struct ImageTitleRatingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ImageTitleRatingCardView(imageRecipeName: .constant("sweets"))
+        RecipeCardItemView(imageRecipeName: .constant("sweets"))
     }
 }
