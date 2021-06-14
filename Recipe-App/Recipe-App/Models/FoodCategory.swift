@@ -22,4 +22,13 @@ enum FoodCategory: String, CaseIterable {
         guard let result = FoodCategory.init(rawValue: value) else { return nil }
         return result
     }
+    
+    static var getAllFoodCategories : [FoodCategory] {
+        return [FoodCategory.CHICKEN,FoodCategory.BEEF,
+                FoodCategory.SOUP, FoodCategory.DESSERT,
+                FoodCategory.VEGETARIAN, FoodCategory.MILK,
+                FoodCategory.VEGAN, FoodCategory.PIZZA,
+                FoodCategory.DONUT
+        ]
+    }
 }
