@@ -32,4 +32,3 @@ enum FoodCategory: String, CaseIterable {
         ]
     }
 }
-
