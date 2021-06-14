@@ -44,9 +44,11 @@ struct RecipeListView: View {
                     //This is where the list data will go
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(placeholderData, id: \.self) { text in
-                            Text(text)
+                            ImageTitleRatingCardView()
                         }
                     }.navigationBarHidden(true)
+                    
+                    
                 }
             }
         }

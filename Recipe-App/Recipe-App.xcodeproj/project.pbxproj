@@ -10,7 +10,7 @@
 		903D022F2674214F00885E81 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D022D2674214F00885E81 /* Recipe.swift */; };
 		903D02302674214F00885E81 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D022E2674214F00885E81 /* FoodCategory.swift */; };
 		903D0238267422B400885E81 /* ChipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903D0237267422B400885E81 /* ChipsView.swift */; };
-
+		90DB501826777598009F2FD6 /* ImageTitleRatingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB501726777598009F2FD6 /* ImageTitleRatingCardView.swift */; };
 		B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB98D02673F390007882A5 /* Recipe_AppApp.swift */; };
 		B1AB98D52673F391007882A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AB98D42673F391007882A5 /* Assets.xcassets */; };
 		B1AB98D82673F391007882A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1AB98D72673F391007882A5 /* Preview Assets.xcassets */; };
@@ -43,6 +43,7 @@
 		903D022D2674214F00885E81 /* Recipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		903D022E2674214F00885E81 /* FoodCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
 		903D0237267422B400885E81 /* ChipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsView.swift; sourceTree = "<group>"; };
+		90DB501726777598009F2FD6 /* ImageTitleRatingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTitleRatingCardView.swift; sourceTree = "<group>"; };
 		B1AB98CD2673F390007882A5 /* Recipe-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Recipe-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1AB98D02673F390007882A5 /* Recipe_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe_AppApp.swift; sourceTree = "<group>"; };
 		B1AB98D42673F391007882A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,13 +155,6 @@
 			path = "Recipe-AppUITests";
 			sourceTree = "<group>";
 		};
-		B1AB98FD267405AD007882A5 /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		B1AB98FE267405C4007882A5 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */,
+				90DB501726777598009F2FD6 /* ImageTitleRatingCardView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -324,12 +319,8 @@
 				903D0238267422B400885E81 /* ChipsView.swift in Sources */,
 				903D02302674214F00885E81 /* FoodCategory.swift in Sources */,
 				B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */,
-				903D0217267415F500885E81 /* APIClient.swift in Sources */,
-				903D01FC2674148700885E81 /* Recipe.swift in Sources */,
-				903D020F2674152900885E81 /* APIRequest.swift in Sources */,
-				903D01FD2674148700885E81 /* FoodCategory.swift in Sources */,
 				B1AB9902267406A4007882A5 /* RecipedetailsViewModel.swift in Sources */,
-				903D021F26741EAE00885E81 /* APIEnvironment.swift in Sources */,
+				90DB501826777598009F2FD6 /* ImageTitleRatingCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
