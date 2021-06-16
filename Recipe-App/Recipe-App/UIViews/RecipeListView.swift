@@ -43,12 +43,12 @@ struct RecipeListView: View {
                     Spacer()
                     //This is where the list data will go
                     ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(placeholderData, id: \.self) { text in
-                            RecipeCardItemView(imageRecipeName: .constant("sweets"), recipeName: .constant("name"), rating: .constant(10))
+                        ForEach(RecipeMock.dummyRecipeList, id: \.id) { recipe in
+                            RecipeCardItemView(imageUrlString: recipe.featuredImage ?? "",
+                                               recipeName: recipe.title ?? "",
+                                               rating: recipe.rating ?? 0)
                         }
                     }.navigationBarHidden(true)
-                    
-                    
                 }
             }
         }

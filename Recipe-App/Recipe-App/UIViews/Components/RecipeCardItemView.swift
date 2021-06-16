@@ -6,17 +6,21 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct RecipeCardItemView: View {
-    @Binding var imageRecipeName: String
-    @Binding var recipeName: String
-    @Binding var rating: Int
-    
+    let imageUrlString: String
+    let recipeName: String
+    let rating: Int
+
     var body: some View {
         VStack(spacing:0) {
-            Image(imageRecipeName)
+        
+            WebImage(url: URL(string: imageUrlString) )
                 .resizable()
-                .scaledToFit()
+                .placeholder(Image(systemName: "photo"))
+                .aspectRatio(contentMode: .fill)
+                .cornerRadius(8)
             HStack{
                 Text(recipeName)
                     .bold()
@@ -36,10 +40,12 @@ struct RecipeCardItemView: View {
     }
 }
 
+#if DEBUG
 struct ImageTitleRatingCardView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeCardItemView(imageRecipeName: .constant("sweets"),
-                           recipeName: .constant("Recipe Name"),
-                           rating: .constant(10))
+        RecipeCardItemView(imageUrlString: "sweets",
+                           recipeName: "Recipe Name",
+                           rating: 10)
     }
 }
+#endif
