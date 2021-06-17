@@ -16,8 +16,8 @@ jobs:
     - name: Force Xcode 11
       run: sudo xcode-select -switch /Applications/Xcode_11.3.app
     - name: Run tests
-      run: xcodebuild clean test -project "Recipe-App.xcodeproj" -scheme "Recipe-App" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
-    - name: Build ApR
+      run: xcodebuild clean test -project "Recipe-App.xcodeproj" -scheme "Recipe-AppTests" -destination "platform=iOS Simulator,name=iPhone 11 Pro Max,OS=latest"
+    - name: Build App
       run: xcodebuild -project "Recipe-App.xcodeproj" -scheme "Recipe-App" -destination "generic/platform=iOS" -configuration Release build CODE_SIGNING_ALLOWED=NO
 
 
