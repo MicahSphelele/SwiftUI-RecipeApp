@@ -10,14 +10,11 @@ import SwiftUI
 struct RecipeListView: View {
     
     @State var selectedCategory: String = ""
-    
-    //Placeholder Data
-    @State var placeholderData = Array(repeating: "PlaceHolder", count: 30)
-    
+
     var body: some View {
         
         //Get the screen size so that I can calculate the right width for the search field
-        GeometryReader { geometry in
+        GeometryReader { geometryReader in
             NavigationView {
                 VStack(spacing: nil) {
                     //This can be moved to a different component called AppToolBar
@@ -26,7 +23,7 @@ struct RecipeListView: View {
                                       .padding(5)
                                       .background(Color(.systemGray6))
                                       .cornerRadius(8)
-                            .frame(width: geometry.size.width / 1.3, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
+                            .frame(width: geometryReader.size.width / 1.3, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
                         Button {
                           print("Action")
                         } label: {
@@ -44,9 +41,7 @@ struct RecipeListView: View {
                     //This is where the list data will go
                     ScrollView(.vertical, showsIndicators: false) {
                         ForEach(RecipeMock.dummyRecipeList, id: \.id) { recipe in
-                            RecipeCardItemView(imageUrlString: recipe.featuredImage ?? "",
-                                               recipeName: recipe.title ?? "",
-                                               rating: recipe.rating ?? 0)
+                            RecipeCardItemView(recipe: recipe, geometryProxy: geometryReader )
                         }
                     }.navigationBarHidden(true)
                 }
