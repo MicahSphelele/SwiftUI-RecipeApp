@@ -23,6 +23,7 @@
 		B1AB9902267406A4007882A5 /* RecipedetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB9901267406A4007882A5 /* RecipedetailsViewModel.swift */; };
 		B1AB990F26740CAB007882A5 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB990E26740CAB007882A5 /* RecipeListView.swift */; };
 		B1AB9912267431C7007882A5 /* FoodCategoryChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */; };
+		B1D782FC267E15A8000AA7E4 /* SearchAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D782FB267E15A8000AA7E4 /* SearchAppBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		B1AB9901267406A4007882A5 /* RecipedetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipedetailsViewModel.swift; sourceTree = "<group>"; };
 		B1AB990E26740CAB007882A5 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryChip.swift; sourceTree = "<group>"; };
+		B1D782FB267E15A8000AA7E4 /* SearchAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +205,7 @@
 			children = (
 				B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */,
 				90DB501726777598009F2FD6 /* RecipeCardItemView.swift */,
+				B1D782FB267E15A8000AA7E4 /* SearchAppBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				908938602679D3AF00878E13 /* RecipeMock.swift in Sources */,
 				903D02302674214F00885E81 /* FoodCategory.swift in Sources */,
 				B1AB98D12673F390007882A5 /* Recipe_AppApp.swift in Sources */,
+				B1D782FC267E15A8000AA7E4 /* SearchAppBar.swift in Sources */,
 				B1AB9902267406A4007882A5 /* RecipedetailsViewModel.swift in Sources */,
 				90DB501826777598009F2FD6 /* RecipeCardItemView.swift in Sources */,
 			);
