@@ -24,10 +24,11 @@ struct RecipeCardItemView: View {
                 ,label: {
                     WebImage(url: AppConstants.getImageWithUrl(url: self.recipe.featuredImage ?? ""))
                         .resizable()
-                        .placeholder(Image(systemName: "photo"))
+                        .placeholder(Image("empty_plate"))
                         .aspectRatio(contentMode: .fill)
                         .frame(width: self.geometryProxy.size.width - 24, height: 250)
                         .cornerRadius(8)
+                        .transition(.fade(duration: 0.5))
                 })
             
             HStack(alignment: .center, content: {
