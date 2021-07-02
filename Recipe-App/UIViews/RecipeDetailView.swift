@@ -13,7 +13,7 @@ struct RecipeDetailView: View {
     @Binding var recipe: Recipe
     
     var body: some View {
-        ScrollView(.vertical, showsIndicators:false, content : {
+        ScrollView(.vertical, showsIndicators: false, content : {
             
             VStack {
                 WebImage(url: AppConstants.getImageWithUrl(url: self.recipe.featuredImage ?? ""))
@@ -39,6 +39,12 @@ struct RecipeDetailView: View {
                         .font(.system(size: 14))
                         
                 })
+                
+                Text("Updated November 11 2020 by blake")
+                    .font(.system(size: 12))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.top, 2)
+                    .padding(.leading, 5)
             }
         
         })
@@ -48,8 +54,10 @@ struct RecipeDetailView: View {
     
 }
 
+#if DEBUG
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailView(recipe: .constant(Recipe(id: 1, title: "Chicken soup with mayo", publisher: nil, featuredImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReU_iHN3DdMKVhOgtJgQW6qmYxPCFZNoenWw&usqp=CAU", rating: 80, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: nil, dateAdded: nil, dateUpdated: nil)))
+        RecipeDetailView(recipe: .constant(Recipe(id: 3, title: "Chicken pasta soup", publisher: "Kiba", featuredImage: "https://www.eatwell101.com/wp-content/uploads/2020/02/chicken-soup-recipe-3.jpg", rating: 70, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: ["2 tablespoons kosher salt","5 cups low sodium chicken broth","4 carrots, cut into bite-sizes pieces","11/2 cups shredded rotsserie chicken", "8 ounces cheese tortellini (fresh or frozen)"], dateAdded: "April 05 2021", dateUpdated: "January 06 2021")))
     }
 }
+#endif
