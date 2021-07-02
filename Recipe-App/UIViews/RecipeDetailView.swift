@@ -42,11 +42,17 @@ struct RecipeDetailView: View {
                         
                 })
                 
-                Text("Updated November 11 2020 by blake")
-                    .font(.system(size: 12))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.top, 2)
-                    .padding(.leading, 5)
+                if recipe.publisher != nil {
+                    
+                    let dateUpated: String =  recipe.dateAdded ?? "April 05 2020"
+                    
+                    Text(AppConstants.getPublishedText(dateUpdated: dateUpated, publisher: recipe.publisher ?? "Unknown"))
+                        .font(.system(size: 12))
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.top, 2)
+                        .padding(.leading, 5)
+                }
+               
             }
         
         })
