@@ -11,8 +11,10 @@ import SDWebImageSwiftUI
 struct RecipeDetailView: View {
     
     @Binding var recipe: Recipe
+    var geometryProxy: GeometryProxy
     
     var body: some View {
+        
         ScrollView(.vertical, showsIndicators: false, content : {
             
             VStack {
@@ -20,7 +22,7 @@ struct RecipeDetailView: View {
                     .resizable()
                     .placeholder(Image("empty_plate"))
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 315, height: 350,alignment: .center)
+                    .frame(width: self.geometryProxy.size.width - 24, height: 350,alignment: .center)
                     .cornerRadius(8)
                     .transition(.fade(duration: 0.5))
                 
@@ -50,6 +52,7 @@ struct RecipeDetailView: View {
         })
         .padding(.horizontal)
         .shadow(color: Color.black.opacity(0.3), radius: 3, x: 3, y: 3)
+        .navigationTitle("Recipe Details")
     }
     
 }
@@ -57,7 +60,9 @@ struct RecipeDetailView: View {
 #if DEBUG
 struct RecipeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeDetailView(recipe: .constant(Recipe(id: 3, title: "Chicken pasta soup", publisher: "Kiba", featuredImage: "https://www.eatwell101.com/wp-content/uploads/2020/02/chicken-soup-recipe-3.jpg", rating: 70, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: ["2 tablespoons kosher salt","5 cups low sodium chicken broth","4 carrots, cut into bite-sizes pieces","11/2 cups shredded rotsserie chicken", "8 ounces cheese tortellini (fresh or frozen)"], dateAdded: "April 05 2021", dateUpdated: "January 06 2021")))
+        GeometryReader { geometryReader in
+            RecipeDetailView(recipe: .constant(Recipe(id: 3, title: "Chicken pasta soup", publisher: "Kiba", featuredImage: "https://www.eatwell101.com/wp-content/uploads/2020/02/chicken-soup-recipe-3.jpg", rating: 70, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: ["2 tablespoons kosher salt","5 cups low sodium chicken broth","4 carrots, cut into bite-sizes pieces","11/2 cups shredded rotsserie chicken", "8 ounces cheese tortellini (fresh or frozen)"], dateAdded: "April 05 2021", dateUpdated: "January 06 2021")), geometryProxy: geometryReader)
+        }
     }
 }
 #endif

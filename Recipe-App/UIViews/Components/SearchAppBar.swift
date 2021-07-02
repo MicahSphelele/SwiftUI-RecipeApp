@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SearchAppBar: View {
     
@@ -14,11 +15,16 @@ struct SearchAppBar: View {
     
     var body: some View {
         HStack {
-            TextField("Search", text: $selectedCategory)
+            TextField("Search Recipe",
+                      text: $selectedCategory, onCommit: {
+                        print("Now Start Search : \(selectedCategory)")
+                      })
+                .keyboardType(.webSearch)
                           .padding(5)
-                          .background(Color(.systemGray6))
-                          .cornerRadius(8)
+                          .background(Color(.white))
                 .frame(width: geometryProxy.size.width / 1.3, height: 100, alignment: .center)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        
             Button {
               print("Action")
             } label: {

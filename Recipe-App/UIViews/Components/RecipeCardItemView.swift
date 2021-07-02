@@ -18,8 +18,8 @@ struct RecipeCardItemView: View {
             
             NavigationLink(
                 destination:
-                    //This is where we will place the recipe details view when an item is clicked
-                    Text("Viewing \(self.recipe.title!) details")
+                
+                    RecipeDetailView(recipe: .constant(recipe), geometryProxy: geometryProxy)
                 
                 ,label: {
                     WebImage(url: AppConstants.getImageWithUrl(url: self.recipe.featuredImage ?? ""))

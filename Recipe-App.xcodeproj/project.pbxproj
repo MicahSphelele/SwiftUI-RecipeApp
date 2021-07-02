@@ -24,6 +24,7 @@
 		B1AB990F26740CAB007882A5 /* RecipeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB990E26740CAB007882A5 /* RecipeListView.swift */; };
 		B1AB9912267431C7007882A5 /* FoodCategoryChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */; };
 		B1B5F8CA268F186100D3B73D /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5F8C9268F186100D3B73D /* RecipeDetailView.swift */; };
+		B1B5F8CC268F26D400D3B73D /* TestingSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B5F8CB268F26D400D3B73D /* TestingSwift.swift */; };
 		B1D782FC267E15A8000AA7E4 /* SearchAppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D782FB267E15A8000AA7E4 /* SearchAppBar.swift */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		B1AB990E26740CAB007882A5 /* RecipeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListView.swift; sourceTree = "<group>"; };
 		B1AB9911267431C7007882A5 /* FoodCategoryChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategoryChip.swift; sourceTree = "<group>"; };
 		B1B5F8C9268F186100D3B73D /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		B1B5F8CB268F26D400D3B73D /* TestingSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingSwift.swift; sourceTree = "<group>"; };
 		B1D782FB267E15A8000AA7E4 /* SearchAppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAppBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +201,7 @@
 				B1AB990E26740CAB007882A5 /* RecipeListView.swift */,
 				903D0237267422B400885E81 /* ChipsView.swift */,
 				B1B5F8C9268F186100D3B73D /* RecipeDetailView.swift */,
+				B1B5F8CB268F26D400D3B73D /* TestingSwift.swift */,
 			);
 			path = UIViews;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			files = (
 				B1AB990F26740CAB007882A5 /* RecipeListView.swift in Sources */,
 				B1AB9900267405E1007882A5 /* RecipeListViewModel.swift in Sources */,
+				B1B5F8CC268F26D400D3B73D /* TestingSwift.swift in Sources */,
 				B1B5F8CA268F186100D3B73D /* RecipeDetailView.swift in Sources */,
 				903D022F2674214F00885E81 /* Recipe.swift in Sources */,
 				90893884267B97DF00878E13 /* AppConstants.swift in Sources */,
