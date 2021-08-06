@@ -58,7 +58,7 @@ struct RecipeCardItemView: View {
 struct ImageTitleRatingCardView_Previews: PreviewProvider {
     static var previews: some View {
         GeometryReader { geometryReader in
-            RecipeCardItemView(recipe: Recipe(id: 1, title: "Chicken soup with mayo", publisher: nil, featuredImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReU_iHN3DdMKVhOgtJgQW6qmYxPCFZNoenWw&usqp=CAU", rating: 80, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: nil, dateAdded: nil, dateUpdated: nil), geometryProxy: geometryReader)
+            RecipeCardItemView(recipe: Recipe(pk: 1, title: "Chicken soup with mayo", publisher: nil, featuredImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReU_iHN3DdMKVhOgtJgQW6qmYxPCFZNoenWw&usqp=CAU", rating: 80, sourceUrl: nil, description: nil, cookingInstructions: nil, ingredients: nil, dateAdded: nil, dateUpdated: nil), geometryProxy: geometryReader)
         }
     }
 }

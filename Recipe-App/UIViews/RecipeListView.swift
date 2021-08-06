@@ -27,7 +27,7 @@ struct RecipeListView: View {
                     Spacer()
                     
                     ScrollView(.vertical, showsIndicators: false) {
-                        ForEach(RecipeMock.dummyRecipeList, id: \.id) { recipe in
+                        ForEach(RecipeMock.dummyRecipeList, id: \.pk) { recipe in
                             RecipeCardItemView(recipe: recipe, geometryProxy: geometryReader )
                         }
                     }.navigationBarHidden(true)
