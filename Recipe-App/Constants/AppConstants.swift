@@ -13,6 +13,8 @@ class AppConstants {
     
     static let REQUEST_FAILED_MESSAGE = "Sorry there is a problem with the service. Please check your connection."
     
+    static let BASE_URL = "https://food2fork.ca/api/recipe/"
+    
      static func getImageWithUrl(url: String) -> URL {
          return URL(string: url)!
      }
@@ -28,4 +30,9 @@ class AppConstants {
             return "Updated by \(publisher)"
         }
     }
+    
+    static let CONTENT_TYPE_JSON = "application/json"
+    
+    static let QUERY_PARAM_PAGE = "?page="
+    static let QUERY_PARAM_QUERY = "&query="
 }

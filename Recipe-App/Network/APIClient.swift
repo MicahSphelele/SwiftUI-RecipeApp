@@ -24,18 +24,23 @@ extension APIError: LocalizedError {
 
 struct APIClient {
     let urlSession: URLSession
-    let environment: APIEnvironment
+    //let environment: APIEnvironment
     
-    init(session: URLSession = .shared, APIEnvironment: APIEnvironment = .dev) {
+    
+    init(session: URLSession = .shared) {
         urlSession = session
-        environment = APIEnvironment
+        //environment = APIEnvironment
     }
     
     func pulisherForRequest<T: APIRequest>(_ request: T) -> AnyPublisher<T.Response, Error> {
-        let url = environment.baseUrl.appendingPathComponent(request.path)
+        let url = request.path
         var urlRequest = URLRequest(url: url)
+        urlRequest.addValue(request.contentType, forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(AppConstants.TOKEN, forHTTPHeaderField: "Authorization")
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
+        
+        
         
         let publisher = urlSession.dataTaskPublisher(for: urlRequest).tryMap {
             data, response -> Data in

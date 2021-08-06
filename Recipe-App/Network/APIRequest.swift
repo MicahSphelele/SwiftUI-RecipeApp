@@ -5,9 +5,9 @@
 //  Created by Gontse Ranoto on 2021/06/12.
 //
 
-import Foundation
+import SwiftUI
 
-enum HTTPMethod: String {
+@frozen enum HTTPMethod: String {
   case GET
   case POST
   case PUT
