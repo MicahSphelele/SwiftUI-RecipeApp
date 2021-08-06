@@ -9,6 +9,10 @@ import SwiftUI
 
 class AppConstants {
     
+    static let TOKEN = "Token 9c8b06d329136da358c2d00e76946b0111ce2c48"
+    
+    static let REQUEST_FAILED_MESSAGE = "Sorry there is a problem with the service. Please check your connection."
+    
      static func getImageWithUrl(url: String) -> URL {
          return URL(string: url)!
      }

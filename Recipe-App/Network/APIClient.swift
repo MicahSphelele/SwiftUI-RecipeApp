@@ -12,6 +12,16 @@ enum APIError: Error {
    case requestFailed(Int)
 }
 
+extension APIError: LocalizedError {
+    
+    public var errorDescription: String? {
+        switch self {
+        case .requestFailed:
+            return AppConstants.REQUEST_FAILED_MESSAGE
+        }
+    }
+}
+
 struct APIClient {
     let urlSession: URLSession
     let environment: APIEnvironment

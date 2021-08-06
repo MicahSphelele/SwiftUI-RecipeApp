@@ -6,7 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 class RecipeListViewModel : ObservableObject {
+    
+    @Published var recipes : [Recipe]? = nil
+    
+    func getReciepeList(){
+        
+    }
     
 }
