@@ -12,8 +12,27 @@ class RecipeListViewModel : ObservableObject {
     
     @Published var recipes : [Recipe]? = nil
     
-    func getReciepeList(){
+    @Published var state = RecipeListViewModelState.idle
+    
+    init() {
+        print("init")
+        getReciepeList()
+    }
+    
+    func getReciepeList() {
         
+         let repository = RecipeRepository()
+        print("getReciepeList")
+        repository.getRecipeList(page: 1, query: "Chicken", completionState: { results in
+            print("completionState:\(results)")
+            switch results {
+                case .finished: self.state = .loaded
+                case .failure(let error): self.state = .error(error)
+            }
+            
+        }, recievedValue: { recipeResponse in
+            print("recievedValue")
+        })
     }
     
 }

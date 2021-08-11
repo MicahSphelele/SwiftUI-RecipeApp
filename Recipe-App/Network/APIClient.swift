@@ -5,7 +5,7 @@
 //  Created by Gontse Ranoto on 2021/06/12.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 enum APIError: Error {
@@ -33,18 +33,22 @@ struct APIClient {
     }
     
     func pulisherForRequest<T: APIRequest>(_ request: T) -> AnyPublisher<T.Response, Error> {
-        let url = request.path
-        var urlRequest = URLRequest(url: url)
+        var urlComoponent = URLComponents(string: request.path)!
+        
+        if !request.queryParams!.isEmpty {
+            
+            urlComoponent.queryItems = request.queryParams as? [URLQueryItem]
+        }
+    
+        var urlRequest = URLRequest(url: urlComoponent.url!)
         urlRequest.addValue(request.contentType, forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue(AppConstants.TOKEN, forHTTPHeaderField: "Authorization")
+        urlRequest.addValue(AppConstants.TOKEN, forHTTPHeaderField: "Authorization")
         urlRequest.httpMethod = request.method.rawValue
         urlRequest.httpBody = request.body
         
-        
-        
         let publisher = urlSession.dataTaskPublisher(for: urlRequest).tryMap {
             data, response -> Data in
-            guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {
+            guard let httpResponse = response as? HTTPURLResponse, 200..<300 ~= httpResponse.statusCode else {        
                 let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 0
                 throw APIError.requestFailed(statusCode)
             }

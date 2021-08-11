@@ -1,33 +1,31 @@
 //
-//  RecipeListState.swift
+//  RecipeListViewModelState.swift
 //  Recipe-App
 //
-//  Created by Sphelele Ngubane on 2021/08/06.
+//  Created by Sphelele Ngubane on 2021/08/10.
 //
 
 import SwiftUI
 
 enum RecipeListViewModelState {
-    case IDLE
-    case LOADING
-    case SUCCESS
+    case idle
+    case loading
+    case loaded
     case error(Error)
 }
 
 enum AppError: Error, Equatable {
-    
-    case badUrl(description: String)
+    case badURL(description: String)
     case parsing(description: String)
     case network(description: String)
-    
+
     var description: String {
         switch self {
-
-        case .parsing(description: let value):
+        case .badURL(let value):
             return value
-        case .network(description: let value):
+        case .parsing(let value):
             return value
-        case .badUrl(description: let value):
+        case .network(let value):
             return value
         }
     }

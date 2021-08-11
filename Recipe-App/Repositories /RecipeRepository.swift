@@ -5,7 +5,7 @@
 //  Created by Sphelele Ngubane on 2021/08/06.
 //
 
-import Foundation
+import SwiftUI
 import Combine
 
 protocol IRecipeRepository {
@@ -13,14 +13,29 @@ protocol IRecipeRepository {
                                          recievedValue: @escaping ((RecipeListResponse) -> Void))
 }
 
-struct RecipeRepository: IRecipeRepository {
-        
-    func getRecipeList(page: Int,query:
-                        String,completionState: @escaping ((Subscribers.Completion<Error>) -> Void),
+final class RecipeRepository: IRecipeRepository {
+       
+    private var subscriptions: Set<AnyCancellable> = []
+    
+    func getRecipeList(page: Int,query: String,
+                       completionState: @escaping ((Subscribers.Completion<Error>) -> Void),
                        recievedValue: @escaping ((RecipeListResponse) -> Void)) {
         
-        //var subscriptions: Set<AnyCancellable> = []
-       // let request = RecipeListRequest(page, query)
+        
+        var request: RecipeListRequest = RecipeListRequest()
+        request.queryParams?.append(URLQueryItem(name: "page", value: String(page)))
+        request.queryParams?.append(URLQueryItem(name: "query", value: query))
+        
+        let client = APIClient()
+        
+        client.pulisherForRequest(request)
+            .sink(receiveCompletion: {
+                result in
+                completionState(result)
+            }, receiveValue: {
+                reciepes in recievedValue(reciepes)
+            })
+            .store(in: &subscriptions)
         
     }
 }

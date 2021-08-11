@@ -10,10 +10,12 @@ import SwiftUI
 struct RecipeListView: View {
     
     @State var selectedCategory: String = ""
+    @StateObject var recipeListViewModel = RecipeListViewModel()
 
     var body: some View {
         
         //Get the screen size so that I can calculate the right width for the search field
+       
         GeometryReader { geometryReader in
             NavigationView {
                 VStack(spacing: nil) {

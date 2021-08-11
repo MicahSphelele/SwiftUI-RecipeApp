@@ -19,6 +19,8 @@ protocol APIRequest {
   var method: HTTPMethod { get }
   var path: String { get }
   var body: Data? { get }
+  var contentType: String { get }
+  var queryParams: [URLQueryItem?]? { get set }
   
   func handle(response: Data) throws -> Response
 }
