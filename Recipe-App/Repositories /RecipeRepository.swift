@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Resolver
 
 protocol IRecipeRepository {
     func getRecipeList(page: Int,query: String,completionState: @escaping ((Subscribers.Completion<Error>) -> Void),
@@ -26,16 +27,19 @@ final class RecipeRepository: IRecipeRepository {
         request.queryParams?.append(URLQueryItem(name: "page", value: String(page)))
         request.queryParams?.append(URLQueryItem(name: "query", value: query))
         
-        let client = APIClient()
+        @Injected  var client: APIClient
         
         client.pulisherForRequest(request)
             .sink(receiveCompletion: {
                 result in
+                print("Error: \(result)")
                 completionState(result)
             }, receiveValue: {
                 reciepes in recievedValue(reciepes)
+                
             })
             .store(in: &subscriptions)
+            
         
     }
 }

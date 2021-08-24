@@ -14,6 +14,8 @@
 		908938692679D82400878E13 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 908938682679D82400878E13 /* SDWebImageSwiftUI */; };
 		90893884267B97DF00878E13 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90893883267B97DF00878E13 /* AppConstants.swift */; };
 		90DB501826777598009F2FD6 /* RecipeCardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DB501726777598009F2FD6 /* RecipeCardItemView.swift */; };
+		B12F11ED26D51FA6009A26D6 /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = B12F11EC26D51FA6009A26D6 /* Resolver */; };
+		B12F11F026D52024009A26D6 /* Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12F11EF26D52024009A26D6 /* Dependencies.swift */; };
 		B1336E9126C2BA950003BED1 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1336E8C26C2BA950003BED1 /* APIEnvironment.swift */; };
 		B1336E9226C2BA950003BED1 /* RecipeListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1336E8D26C2BA950003BED1 /* RecipeListRequest.swift */; };
 		B1336E9326C2BA950003BED1 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1336E8E26C2BA950003BED1 /* APIClient.swift */; };
@@ -58,6 +60,7 @@
 		9089385F2679D3AF00878E13 /* RecipeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeMock.swift; sourceTree = "<group>"; };
 		90893883267B97DF00878E13 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		90DB501726777598009F2FD6 /* RecipeCardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCardItemView.swift; sourceTree = "<group>"; };
+		B12F11EF26D52024009A26D6 /* Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dependencies.swift; sourceTree = "<group>"; };
 		B1336E8C26C2BA950003BED1 /* APIEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIEnvironment.swift; path = "Recipe-App/Network/APIEnvironment.swift"; sourceTree = SOURCE_ROOT; };
 		B1336E8D26C2BA950003BED1 /* RecipeListRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RecipeListRequest.swift; path = "Recipe-App/Network/RecipeListRequest.swift"; sourceTree = SOURCE_ROOT; };
 		B1336E8E26C2BA950003BED1 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = "Recipe-App/Network/APIClient.swift"; sourceTree = SOURCE_ROOT; };
@@ -89,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12F11ED26D51FA6009A26D6 /* Resolver in Frameworks */,
 				908938692679D82400878E13 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +141,14 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		B12F11EE26D51FF0009A26D6 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B12F11EF26D52024009A26D6 /* Dependencies.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		B1336E8A26C2BA7B0003BED1 /* AppNetwork */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +191,7 @@
 		B1AB98CF2673F390007882A5 /* Recipe-App */ = {
 			isa = PBXGroup;
 			children = (
+				B12F11EE26D51FF0009A26D6 /* DI */,
 				B1336E8A26C2BA7B0003BED1 /* AppNetwork */,
 				B152993726BD43DF002F0B65 /* Repositories  */,
 				90893882267B979E00878E13 /* Constants */,
@@ -268,6 +281,7 @@
 			name = "Recipe-App";
 			packageProductDependencies = (
 				908938682679D82400878E13 /* SDWebImageSwiftUI */,
+				B12F11EC26D51FA6009A26D6 /* Resolver */,
 			);
 			productName = "Recipe-App";
 			productReference = B1AB98CD2673F390007882A5 /* Recipe-App.app */;
@@ -342,6 +356,7 @@
 			mainGroup = B1AB98C42673F390007882A5;
 			packageReferences = (
 				908938672679D82400878E13 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				B12F11EB26D51FA6009A26D6 /* XCRemoteSwiftPackageReference "Resolver" */,
 			);
 			productRefGroup = B1AB98CE2673F390007882A5 /* Products */;
 			projectDirPath = "";
@@ -385,6 +400,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B12F11F026D52024009A26D6 /* Dependencies.swift in Sources */,
 				B1AB990F26740CAB007882A5 /* RecipeListView.swift in Sources */,
 				B1336E9426C2BA950003BED1 /* APIRequest.swift in Sources */,
 				B1AB9900267405E1007882A5 /* RecipeListViewModel.swift in Sources */,
@@ -734,6 +750,14 @@
 				minimumVersion = 2.0.2;
 			};
 		};
+		B12F11EB26D51FA6009A26D6 /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.4.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -741,6 +765,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 908938672679D82400878E13 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		B12F11EC26D51FA6009A26D6 /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B12F11EB26D51FA6009A26D6 /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

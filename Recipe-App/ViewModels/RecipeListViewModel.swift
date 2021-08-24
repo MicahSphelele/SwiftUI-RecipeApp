@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Resolver
 
 class RecipeListViewModel : ObservableObject {
     
@@ -21,7 +22,8 @@ class RecipeListViewModel : ObservableObject {
     
     func getReciepeList() {
         
-         let repository = RecipeRepository()
+        @Injected var repository : IRecipeRepository
+        
         print("getReciepeList")
         repository.getRecipeList(page: 1, query: "Chicken", completionState: { results in
             print("completionState:\(results)")

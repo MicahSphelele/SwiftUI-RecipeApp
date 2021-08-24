@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import Resolver
 
 struct RecipeListView: View {
     
     @State var selectedCategory: String = ""
-    @StateObject var recipeListViewModel = RecipeListViewModel()
+    
+    @Injected
+    @StateObject var recipeListViewModel: RecipeListViewModel
 
     var body: some View {
         
@@ -42,7 +45,8 @@ struct RecipeListView: View {
 #if DEBUG
 struct RecipeListView_Previews: PreviewProvider {
     static var previews: some View {
-        RecipeListView()
+        Text("Hello World")
+        //RecipeListView(, recipeListViewModel: <#RecipeListViewModel#>)
     }
 }
 #endif

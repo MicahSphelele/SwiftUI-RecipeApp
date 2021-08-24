@@ -18,10 +18,10 @@ struct RecipeListRequest: APIRequest {
     var body: Data? { nil }
     var queryParams: [URLQueryItem?]? = []
     
-    func handle(response: Data) throws -> RecipeListResponse {
+    func handle(response: Data) throws -> Response {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
-        return try decoder.decode(RecipeListResponse.self, from: response)
+        return try decoder.decode(Response.self, from: response)
     }
     
 }
